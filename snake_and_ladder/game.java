@@ -2,6 +2,7 @@ package snake_and_ladder;
 
 public class game {
 	  public static int position_of_player1=0;
+	  public static int position_of_player2=0;
       public static int no_of_die_rolls=0;
       public static int die_value;
       public static int values=0;
@@ -78,14 +79,23 @@ public class game {
       {
           
           game playing=new game();
-          while (position_of_player1<100) {
-          position_of_player1=playing.play(position_of_player1);
-          System.out.println("Number Of Die Roll :" +no_of_die_rolls + "\n" + "Position of Player1 :"+position_of_player1);  
+          while (position_of_player1<100 && position_of_player2<100) {
+        	  position_of_player1 = game.play(position_of_player1);
+              System.out.println("Number Of Die Roll :" + no_of_die_rolls + "\tPosition of Player1 :" + position_of_player1);
+
+              position_of_player2 = game.play(position_of_player2);
+              System.out.println("Number Of Die Roll :" + no_of_die_rolls  + "\tPosition of Player2 :" + position_of_player2);
+        	  
+              
+
+        	  
+  
           }
-          if (postion_of_player1==100) {
+          if (position_of_player1==100) {
         	  System.out.println("player 1 is winner");
+          }else {
+        	  System.out.println("player 2 is winner");
           }
-         
       }
           
 
