@@ -82,6 +82,9 @@ public class game {
           position_of_player1=playing.play(position_of_player1);
           System.out.println("Number Of Die Roll :" +no_of_die_rolls + "\n" + "Position of Player1 :"+position_of_player1);  
           }
+          if (postion_of_player1==100) {
+        	  System.out.println("player 1 is winner");
+          }
          
       }
           
